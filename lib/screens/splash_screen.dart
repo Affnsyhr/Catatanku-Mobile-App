@@ -11,7 +11,7 @@ class SplashScreen extends StatefulWidget {
 
 class _SplashScreenState extends State<SplashScreen>
     with SingleTickerProviderStateMixin {
-  static const Color primary = Color(0xFF0FA3A3);
+  static const Color primary = Color(0xFF5C6BC0);
   late AnimationController _animationController;
   late Animation<double> _progressAnimation;
 

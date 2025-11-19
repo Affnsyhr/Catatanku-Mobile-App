@@ -17,7 +17,7 @@ class _EditNoteScreenState extends State<EditNoteScreen> {
   final _titleCtrl = TextEditingController();
   final _contentCtrl = TextEditingController();
   bool _loading = false;
-  static const Color primary = Color(0xFF0FA3A3);
+  static const Color primary = Color(0xFF5C6BC0);
 
   @override
   void initState() {

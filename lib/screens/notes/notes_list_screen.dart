@@ -8,7 +8,7 @@ import 'edit_note_screen.dart';
 
 class NotesListScreen extends StatelessWidget {
   const NotesListScreen({super.key});
-  static const Color primary = Color(0xFF0FA3A3);
+  static const Color primary = Color(0xFF5C6BC0);
 
   @override
   Widget build(BuildContext context) {
@@ -30,12 +30,7 @@ class NotesListScreen extends StatelessWidget {
           ),
           IconButton(
             icon: const Icon(Icons.logout),
-            onPressed: () async {
-              await auth.signOut();
-              if (context.mounted) {
-                Navigator.pushReplacementNamed(context, '/login');
-              }
-            },
+            onPressed: () => _showLogoutConfirmation(context, auth),
           ),
         ],
       ),
@@ -84,6 +79,34 @@ class NotesListScreen extends StatelessWidget {
           MaterialPageRoute(builder: (_) => const EditNoteScreen()),
         ),
         child: const Icon(Icons.add),
+      ),
+    );
+  }
+
+  void _showLogoutConfirmation(BuildContext context, AuthService auth) {
+    showDialog(
+      context: context,
+      builder: (context) => AlertDialog(
+        title: const Text('Keluar Aplikasi'),
+        content: const Text('Apakah Anda yakin ingin keluar?'),
+        actions: [
+          TextButton(
+            onPressed: () => Navigator.pop(context),
+            child: const Text('Batal', style: TextStyle(color: Colors.grey)),
+          ),
+          TextButton(
+            onPressed: () async {
+              await auth.signOut();
+              if (context.mounted) {
+                Navigator.pushReplacementNamed(context, '/login');
+              }
+            },
+            child: const Text(
+              'Ya, Keluar',
+              style: TextStyle(color: Colors.red),
+            ),
+          ),
+        ],
       ),
     );
   }

@@ -14,7 +14,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
   final _pwCtrl = TextEditingController();
   final _pw2Ctrl = TextEditingController();
   bool _loading = false;
-  static const Color primary = Color(0xFF0FA3A3);
+  static const Color primary = Color(0xFF5C6BC0);
 
   @override
   void dispose() {

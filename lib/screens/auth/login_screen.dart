@@ -13,7 +13,7 @@ class _LoginScreenState extends State<LoginScreen> {
   final _emailCtrl = TextEditingController();
   final _pwCtrl = TextEditingController();
   bool _loading = false;
-  static const Color primary = Color(0xFF0FA3A3);
+  static const Color primary = Color(0xFF5C6BC0);
 
   @override
   void dispose() {

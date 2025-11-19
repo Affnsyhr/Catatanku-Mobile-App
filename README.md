@@ -84,7 +84,7 @@ Aplikasi ini dibangun menggunakan **Flutter** sebagai framework UI dan **Firebas
   - Automatic system theme detection
 
 - **Theme Customization**
-  - Primary color: Teal (#0FA3A3)
+  - Primary color: Indigo (#5C6BC0)
   - Light theme: Clean white background
   - Dark theme: Dark surface dengan proper contrast
   - Material Design 3 compliance
